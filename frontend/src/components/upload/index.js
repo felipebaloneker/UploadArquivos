@@ -18,9 +18,10 @@ renderDragMessage = (isDragActive,isDragReject) =>{
 };
 
     render(){
+        const {onUpload} =  this.props;
         return(
             <Dropzone
-            accept="image/*" onDropAccepted={() =>{}}>
+            accept="image/*" onDropAccepted={onUpload}>
                 {({getRootProps,getInputProps,isDragActive,isDragReject})=>(
                 <DropContainer
                 {...getRootProps()}
