@@ -7,7 +7,7 @@ import {MdCheckCircle, MdError, MdLink} from 'react-icons/md';
 const FileList = ({files}) => (
     <Container>
         {files.map(uploadedFile =>(
-        <li>
+        <li key={uploadedFile.id}>
             <FileInfo>
                 <Preview src={uploadedFile.preview}/>
                 <div>
@@ -29,7 +29,7 @@ const FileList = ({files}) => (
                 )}
                 {uploadedFile.url &&(
                     <a
-                    href='#'
+                    href={uploadedFile.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     >
