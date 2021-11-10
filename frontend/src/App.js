@@ -25,7 +25,14 @@ class App extends Component {
     }))
 
     this.setState({uploadedFiles: this.state.uploadedFiles.concat(uploadedFiles)})
+
+      /// upload do arquivo no backend
+     uploadedFiles.forEach(this.processUpload)
   };
+
+  processUpload = () => {
+    
+  }
 
   render(){
     return (
